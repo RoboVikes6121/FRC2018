@@ -7,6 +7,8 @@
 
 package org.usfirst.frc.team6121.robot;
 
+import com.github.roboVikes.gameName.drive.Drive;
+import org.usfirst.frc.team6121.robot.Gamepad;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -33,6 +35,14 @@ public class Robot extends IterativeRobot {
 		m_chooser.addDefault("Default Auto", kDefaultAuto);
 		m_chooser.addObject("My Auto", kCustomAuto);
 		SmartDashboard.putData("Auto choices", m_chooser);
+		try{
+		//robot initializations in this try
+			Actuators.init();
+			Drive.init();
+		}catch(Exception e){
+			System.out.println("Errors occured during initialization!!");
+			System.out.println(e.getMessage());
+		}
 	}
 
 	/**
@@ -75,6 +85,9 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
+		//Add other controls here
+		//Only call the methods. No logic should be put here.
+		Drive.drive(Gamepad.primary.getLeftY(), Gamepad.primary.getRightY());
 	}
 
 	/**
