@@ -1,5 +1,4 @@
-# FRC2018
-RoboVikes Code for 2018
+# RoboVikes Practice Robot Code
 
-
-Only difference from the master branch should be that the drive motors are initialized as Victors on this one as opposed to Talons on the master.
+This code is what is run on the practice robot, due to it having slightly different motor controllers than the Competition Robot.
+Their should only be subtle differences, such as specific values(PID, motor speeds, etc.). In addition, the drive motors will be Victors instead of Talons as they are on the Competition robot.
