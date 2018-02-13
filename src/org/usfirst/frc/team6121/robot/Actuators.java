@@ -5,6 +5,8 @@ import org.usfirst.frc.team6121.robot.Constants;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 
+import edu.wpi.first.wpilibj.Solenoid;
+
 public class Actuators {
 	//all motors variables get created in this file
 	
@@ -18,7 +20,7 @@ public class Actuators {
 	
 	
 	//Pneumatics
-	
+	private static Solenoid examplePneumatic;
 	
 	//Initializations
 	public static void init(){
@@ -32,7 +34,7 @@ public class Actuators {
 		leftDriveMotorSlave = new TalonSRX(Constants.LEFT_REAR_DRIVE_MOTOR_PORT);
 		leftDriveMotorSlave.follow(leftDriveMotor);
 		//pneumatics
-		
+		examplePneumatic = new Solenoid(Constants.EXAMPLE_PNEUMATIC_PORT);
 		
 	}
 	
@@ -48,5 +50,10 @@ public class Actuators {
 	}
 	public static TalonSRX getLeftDriveMotorSlave(){
 		return leftDriveMotorSlave;
-	}		
+	}
+	
+	//Pneumatic returns below
+	public static Solenoid getExamplePneumatic(){
+		return examplePneumatic;
+	}
 }

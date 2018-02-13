@@ -7,9 +7,11 @@
 
 package org.usfirst.frc.team6121.robot;
 
-import com.github.roboVikes.gameName.drive.Drive;
 import org.usfirst.frc.team6121.robot.Gamepad;
-import edu.wpi.first.wpilibj.IterativeRobot;
+
+import com.github.roboVikes.PowerUp.drive.Drive;
+
+import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -20,7 +22,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * creating this project, you must also update the build.properties file in the
  * project.
  */
-public class Robot extends IterativeRobot {
+public class Robot extends TimedRobot {
 	private static final String kDefaultAuto = "Default";
 	private static final String kCustomAuto = "My Auto";
 	private String m_autoSelected;
