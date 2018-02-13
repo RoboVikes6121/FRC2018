@@ -1,6 +1,7 @@
 # RoboVikes FRC2018 Robot Code
 
-The RoboVikes are a FIRST Robotics Team from Grayling Michigan. This is the branch made for developing code to run on their competition robot for 2018.
+The RoboVikes are a FIRST Robotics Team from Grayling Michigan. This is the current code running on their competition robot.
+
 
 
 # How to commit/push to this repository
